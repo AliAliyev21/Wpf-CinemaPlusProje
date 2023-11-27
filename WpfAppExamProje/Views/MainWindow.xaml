@@ -1,0 +1,129 @@
+﻿<Window x:Class="WpfAppExamProje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppExamProje"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="1370" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.4*"/>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="6.5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.7*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="#404CA5">
+                <Canvas>
+                    <Image Source="/Images/logocine.png" Width="130" Canvas.Left="220" Canvas.Top="10" Stretch="Uniform"></Image>
+                    <Label Canvas.Right="80" Canvas.Top="25" FontWeight="Bold" Foreground="White" FontSize="35">CINEMA</Label>
+                    <Label Canvas.Right="134" Canvas.Top="53" FontWeight="Bold" Foreground="DeepSkyBlue" FontSize="35">PLUS</Label>
+                </Canvas>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <WrapPanel Orientation="Horizontal">
+                        <Button Name="Platinum" Width="100" Height="60" Margin="34,0,0,0" Content="Platinum" FontSize="17" FontWeight="Medium"
+                                Foreground="#6F6C72" BorderThickness="0" Background="Transparent" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="Dolby" Width="120" Height="60" Margin="30,0,0,0" Content="Dolby Atmos" FontSize="17" FontWeight="Medium"
+                                Foreground="#6F6C72" BorderThickness="0" Background="Transparent" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="Services" Width="100" Height="60" Margin="27,0,0,0" Content="Services" FontSize="17" FontWeight="Medium"
+                                Foreground="#6F6C72" BorderThickness="0" Background="Transparent" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="About" Width="100" Height="60" Margin="28,0,0,0" Content="About us" FontSize="17" FontWeight="Medium"
+                                Foreground="#6F6C72" BorderThickness="0" Background="Transparent" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="Aze" Width="35" Height="30" Background="Transparent" BorderThickness="0" Margin="100,0,0,0" Content="AZ"
+                                FontWeight="Medium" FontSize="15" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="Rus" Width="35" Height="30" Background="Transparent" BorderThickness="0" Content="RU"
+                                FontWeight="Medium" FontSize="15" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Button Name="English" Width="35" Height="30" Background="Transparent" BorderThickness="0" Content="EN"
+                                FontWeight="Medium" FontSize="15" Style="{StaticResource myButtonStyle2}"></Button>
+                        <Image Width="30" Height="26" Source="../Images/apple.jpg" Cursor="Hand"></Image>
+                        <Image Width="30" Height="29" Source="../Images/android.jpg" Cursor="Hand"></Image>
+                    </WrapPanel>
+                </Grid>
+                <Grid Grid.Row="1" Background="DeepSkyBlue">
+                    <WrapPanel Orientation="Horizontal">
+                        <Button Name="Home" Width="120" Height="67" Margin="20,0,0,0" Content="Home" FontSize="21" FontWeight="Bold" Foreground="White"
+                         Background="DeepSkyBlue" BorderThickness="0" Style="{StaticResource myButtonStyle}" Command="{Binding HomeCommand}"></Button>
+
+                        <Button Name="Fag" Width="120" Height="67" Margin="20,0,0,0" Content="Fag" FontSize="21" FontWeight="Bold" Foreground="White"
+                         Background="DeepSkyBlue" BorderThickness="0" Style="{StaticResource myButtonStyle}"></Button>
+
+                        <Button Name="Tariffs" Width="120" Height="67" Margin="20,0,0,0" Content="Tariffs" FontSize="21" FontWeight="Bold" Foreground="White"
+                         Background="DeepSkyBlue" BorderThickness="0" Style="{StaticResource myButtonStyle}"></Button>
+
+                        <Button Name="Bonus" Width="135" Height="67" Margin="20,0,0,0" Content="CineBonus" FontSize="21" FontWeight="Bold" Foreground="White"
+                         Background="DeepSkyBlue" BorderThickness="0" Style="{StaticResource myButtonStyle}"></Button>
+
+                        <Image Width="20" Height="30" Source="../Images/phoneIcon.jpg" Margin="60,0,0,0"></Image>
+                        <Label Width="147" Height="62" FontSize="15" FontWeight="Bold" Foreground="White" Content="+994 99 909 09 09"
+                               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                    </WrapPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Canvas>
+                <ToggleButton Width="130" Height="65" Canvas.Left="540" Canvas.Top="46" Content="TODAY" FontSize="21" FontWeight="Medium" Cursor="Hand"
+                    Command="{Binding TodayCommand}" IsChecked="{Binding IsTodaySelected, Mode=TwoWay}">
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border x:Name="Border" Background="White" CornerRadius="10,10,0,0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#404CA5"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
+                <ToggleButton Width="130" Height="65" Canvas.Left="673" Canvas.Top="46" Content="SCHEDULE" FontSize="21" FontWeight="Medium" Cursor="Hand"
+                    Command="{Binding ScheduleCommand}" IsChecked="{Binding IsScheduleSelected, Mode=TwoWay}">
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border x:Name="Border" Background="White" CornerRadius="10,10,0,0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#404CA5"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
+                <ToggleButton Width="130" Height="65" Canvas.Left="807" Canvas.Top="46" Content="SEARCH" FontSize="21" FontWeight="Medium" Cursor="Hand"
+                    Command="{Binding SearchCommand}" IsChecked="{Binding IsSearchActive, Mode=TwoWay}">
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border x:Name="Border" Background="White" CornerRadius="10,10,0,0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#404CA5"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="2" Name="myMainGrid">
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="WpfAppExamProje.Views.UserControls.SearchUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppExamProje.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1370">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#404CA5">
+            <Canvas>
+                <TextBox Name="movieTextbox" Canvas.Top="30" Canvas.Left="300" FontSize="16" FontWeight="Medium" Width="800" Height="41" Style="{StaticResource myTextBox}"></TextBox>
+                <Button Name="Search" Content="Search" FontSize="20" FontWeight="Medium" Background="White"
+                        Width="120" Height="41" Canvas.Left="1096" Canvas.Top="30" Foreground="Gray" Click="Search_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="White" CornerRadius="0,10,10,0" BorderBrush="DeepSkyBlue" BorderThickness="2">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Canvas>
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <StackPanel Name="myStackPanel">
+                        <Label Name="movieLabel" FontSize="25" FontWeight="ExtraBlack" HorizontalContentAlignment="Center" ></Label>
+                        <Canvas Width="900" Height="665">
+                            <Image Stretch="Fill" Name="movieImage2" Width="900" Height="665">
+                                <Image.Effect>
+                                    <BlurEffect Radius="15" KernelType="Gaussian"></BlurEffect>
+                                </Image.Effect>
+                            </Image>
+
+                            <Image Name="movieImage" Canvas.Left="270" Panel.ZIndex="10" Canvas.Top="50" Width="350" Height="450">
+                                
+                            </Image>
+                        </Canvas>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

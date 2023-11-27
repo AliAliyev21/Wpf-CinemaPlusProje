@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\12+Icon.png" />
+    <None Remove="Images\18+Icon.png" />
+    <None Remove="Images\2d.png" />
+    <None Remove="Images\android.jpg" />
+    <None Remove="Images\apple.jpg" />
+    <None Remove="Images\Aze.jpg" />
+    <None Remove="Images\azsub.png" />
+    <None Remove="Images\catastrop.jpg" />
+    <None Remove="Images\cokawk.jpg" />
+    <None Remove="Images\english.png" />
+    <None Remove="Images\fivenights.jpg" />
+    <None Remove="Images\hozu.png" />
+    <None Remove="Images\logocine.png" />
+    <None Remove="Images\marvel.jpg" />
+    <None Remove="Images\napoleon.jpg" />
+    <None Remove="Images\phoneIcon.jpg" />
+    <None Remove="Images\russia.png" />
+    <None Remove="Images\seats.jpg" />
+    <None Remove="Images\thehunger.jpg" />
+    <None Remove="Images\turkey.png" />
+    <None Remove="Images\twod.png" />
+    <None Remove="Images\wishsite.jpg" />
+    <None Remove="Images\ziricin.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\2d.png" />
+    <Resource Include="Images\android.jpg" />
+    <Resource Include="Images\apple.jpg" />
+    <Resource Include="Images\Aze.jpg" />
+    <Resource Include="Images\azsub.png" />
+    <Resource Include="Images\catastrop.jpg" />
+    <Resource Include="Images\cokawk.jpg" />
+    <Resource Include="Images\english.png" />
+    <Resource Include="Images\fivenights.jpg" />
+    <Resource Include="Images\hozu.png" />
+    <Resource Include="Images\18+Icon.png" />
+    <Resource Include="Images\12+Icon.png" />
+    <Resource Include="Images\logocine.png" />
+    <Resource Include="Images\marvel.jpg" />
+    <Resource Include="Images\napoleon.jpg" />
+    <Resource Include="Images\phoneIcon.jpg" />
+    <Resource Include="Images\russia.png" />
+    <Resource Include="Images\seats.jpg" />
+    <Resource Include="Images\thehunger.jpg" />
+    <Resource Include="Images\turkey.png" />
+    <Resource Include="Images\twod.png" />
+    <Resource Include="Images\wishsite.jpg" />
+    <Resource Include="Images\ziricin.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="WpfAppExamProje.Views.UserControls.HomeUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppExamProje.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1370">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4.8*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#404CA5">
+            <Canvas>
+                <ComboBox ItemsSource="{Binding AllFacilities}"   SelectedItem="{Binding SelectedFacility}"  FontWeight="Medium" FontSize="18" Width="190" Height="43" Canvas.Left="360" Canvas.Top="30" Style="{StaticResource theComboBox}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <ComboBox ItemsSource="{Binding AllLanguages}"  SelectedItem="{Binding SelectedLanguage}"  FontWeight="Medium" FontSize="18" Width="190" Height="43" Canvas.Left="650" Canvas.Top="30" Style="{StaticResource theComboBox}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Language}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ToggleButton Width="190" Height="43" Canvas.Left="950" Canvas.Top="30" Content="Movies in English" FontSize="18" FontWeight="Medium" Cursor="Hand"
+                              IsChecked="{Binding IsEnglishChecked}"
+                              Command="{Binding EnglishCommand}">
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border x:Name="Border" Background="White" CornerRadius="25" BorderBrush="Gray" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="DeepSkyBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="8.2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="1" >
+                <Grid>
+                    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding FilteredMovies}" Width="1400"
+                             SelectionMode="Single"
+                             SelectedItem="{Binding SelectedMovie, Mode=TwoWay}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="265" Height="487" Background="WhiteSmoke" Margin="15" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.8*"/>
+                                        <RowDefinition Height="9.4*"/>
+                                        <RowDefinition Height="1.6*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0" >
+                                        <TextBlock Width="266" Height="62" Text="{Binding Name}"  TextWrapping="Wrap" TextAlignment="Center"
+                                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            FontSize="20" FontWeight="Medium" Style="{StaticResource myTextBlockStyle}" 
+                                            MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"></TextBlock>
+                                    </Grid>
+                                    <Grid Grid.Row="1" Background="Beige">
+                                        <Image Source="{Binding Image}" Width="270" Height="310" Stretch="Fill"  ></Image>
+                                    </Grid>
+                                    <Grid Grid.Row="2" Background="White">
+                                        <WrapPanel>
+                                            <Border Width="40" Height="40" Margin="12,6,0,0" CornerRadius="3" BorderBrush="DeepSkyBlue" BorderThickness="4">
+                                                <Image Source="{Binding FormatRu}" Stretch="Fill" ></Image>
+                                            </Border>
+
+                                            <Border Width="40" Height="40" Margin="10,6,0,0" CornerRadius="3" BorderBrush="DeepSkyBlue" BorderThickness="4">
+                                                <Image Source="{Binding FormatEn}" Stretch="Fill" ></Image>
+                                            </Border>
+
+                                            <Border Width="40" Height="40" Margin="10,6,0,0" CornerRadius="3" BorderBrush="DeepSkyBlue" BorderThickness="4">
+                                                <Image Source="{Binding FormatTr}" Stretch="Fill"  ></Image>
+                                            </Border>
+
+                                            <Border  Width="53" Height="46" Margin="5,6,0,0" CornerRadius="3" BorderBrush="DeepSkyBlue" BorderThickness="0">
+                                                <Image Source="{Binding Format2D}" Stretch="Fill"  ></Image>
+                                            </Border>
+
+                                            <Border Width="53" Height="46" Margin="0,6,0,0" CornerRadius="3" BorderBrush="DeepSkyBlue" BorderThickness="0">
+                                                <Image Source="{Binding FormatAzeSub}" Stretch="Fill"  ></Image>
+                                            </Border>
+                                        </WrapPanel>
+                                    </Grid>
+                                    <Grid Grid.Row="3">
+                                        <WrapPanel>
+                                            <Button Height="40" Width="120" Margin="50,5,0,0" Content="SESSIONS" 
+                                                Foreground="White" FontSize="15" FontWeight="Medium" Click="Sessions_Click" >
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Border CornerRadius="20" Background="#404CA5">
+                                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                            </Button>
+                                            <Border Width="70" Height="56" Margin="10,5,0,0" CornerRadius="25">
+                                                <Image Source="{Binding AgeRestrictions}" ></Image>
+                                            </Border>
+                                        </WrapPanel>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel IsItemsHost="True" Orientation="Horizontal"></WrapPanel>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>
