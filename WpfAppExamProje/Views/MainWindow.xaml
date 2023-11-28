@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppExamProje"
         mc:Ignorable="d"
-        Title="MainWindow" Height="850" Width="1370" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="MainWindow" Height="850" Width="1470" WindowStartupLocation="CenterScreen" WindowState="Normal">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.4*"/>
