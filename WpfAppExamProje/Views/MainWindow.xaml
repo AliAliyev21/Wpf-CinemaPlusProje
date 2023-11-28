@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Background="#404CA5">
                 <Canvas>
-                    <Image Source="/Images/logocine.png" Width="130" Canvas.Left="220" Canvas.Top="10" Stretch="Uniform"></Image>
+                    <Image Source="/Images/logocine.png" Width="130" Canvas.Left="200" Canvas.Top="10" Stretch="Uniform"></Image>
                     <Label Canvas.Right="80" Canvas.Top="25" FontWeight="Bold" Foreground="White" FontSize="35">CINEMA</Label>
                     <Label Canvas.Right="134" Canvas.Top="53" FontWeight="Bold" Foreground="DeepSkyBlue" FontSize="35">PLUS</Label>
                 </Canvas>
