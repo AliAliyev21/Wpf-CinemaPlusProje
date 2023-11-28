@@ -66,7 +66,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Napoleon",
                     TralierUrl="https://www.youtube.com/watch?v=LIsfMO5Jd_w",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/napoleon.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -95,7 +95,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Catastrophe",
                     TralierUrl="https://www.youtube.com/watch?v=MHkVZYK0rpQ",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/catastrop.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -126,7 +126,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Much Love",
                     TralierUrl="https://www.youtube.com/watch?v=B8Y0LaC07ok",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/cokawk.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -160,7 +160,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Five Nights at Freddy's",
                     TralierUrl="https://www.youtube.com/watch?v=Z_T0o5uNrlY",
-                    DateTime = new DateTime(2023, 11, 28),
+                    DateTime = new DateTime(2023, 11, 29),
                     Image="/Images/fivenights.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -190,7 +190,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Hozu Dayə",
                     TralierUrl="https://www.youtube.com/watch?v=oYtgTke_bvk",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/hozu.png",
                     FormatRu="/Images/Aze.jpg",
                     FormatEn="/Images/english.png",
@@ -220,7 +220,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="The Marvels",
                     TralierUrl="https://www.youtube.com/watch?v=uwmDH12MAA4",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/marvel.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -253,7 +253,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="The Hunger Games: The Ballad of Songbirds",
                     TralierUrl="https://www.youtube.com/watch?v=NxW_X4kzeus",
-                    DateTime = new DateTime(2023, 11, 27),
+                    DateTime = new DateTime(2023, 11, 28),
                     Image="/Images/thehunger.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -286,7 +286,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Wish",
                     TralierUrl="https://www.youtube.com/watch?v=oyRxxpD3yNw",
-                    DateTime = new DateTime(2023, 11, 28),
+                    DateTime = new DateTime(2023, 11, 29),
                     Image="/Images/wishsite.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
@@ -319,7 +319,7 @@ namespace WpfAppExamProje.ViewModels
                 {
                     Name="Zir-i cin 2",
                     TralierUrl="https://www.youtube.com/watch?v=d6IHPk_WUzA",
-                    DateTime = new DateTime(2023, 11, 28),
+                    DateTime = new DateTime(2023, 11, 29),
                     Image="/Images/ziricin.jpg",
                     FormatRu="/Images/russia.png",
                     FormatEn="/Images/english.png",
